@@ -90,6 +90,10 @@ public class TS3Query {
 		this.connectionHandler = config.getReconnectStrategy().create(config.getConnectionHandler());
 	}
 
+	public boolean isConnected(){
+		return io.getSocket() != null && io.getSocket().isConnected();
+	}
+	
 	// PUBLIC
 
 	public TS3Query connect() {

@@ -30,6 +30,8 @@ import com.github.theholywaffle.teamspeak3.api.Callback;
 import com.github.theholywaffle.teamspeak3.api.exception.TS3ConnectionFailedException;
 import com.github.theholywaffle.teamspeak3.commands.Command;
 
+import lombok.Getter;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Collections;
@@ -40,6 +42,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class QueryIO {
 
+	@Getter
 	private final Socket socket;
 	private final SocketReader socketReader;
 	private final SocketWriter socketWriter;
